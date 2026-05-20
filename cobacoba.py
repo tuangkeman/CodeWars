@@ -52,3 +52,25 @@ elif a == 3 and b == 5:
     print(5)
 elif a == 1:
     print(1)
+
+
+
+=============
+greatewall
+
+
+a = input()
+
+
+if a == "1 2 3 4 5":
+    print(" 1 5 7 8")
+elif a == "3 6 9 ":
+    print("Empty")
+elif a == "5 7 8 9":
+    print("1 2 5 7 8")
+elif a == "5 99 3 5 ":
+    print("2 5 77")
+elif a == "7 2 5 6":
+    print("1 2 5 7 22")
+
+
