@@ -30,29 +30,20 @@ def hitung_keaktifan(daftar_pertemuan):
 
 =================================================================================
 everywhare
-a = eval(input())
-b = eval(input())
-if a == 5 and b == 8:
-    print(3)
-    print(4)
-    print(1)
-    print(5)
-    print(3)
-elif a == 2 and b == 7:
-    print(4)
-    print(1)
-elif a == 1 and b == 10:
-    print(4)
-elif a == 1 and b == 100:
-    print(26)
+diubah ya nama variablenya
+a = int(input())
 
-elif a == 3 and b == 5:
-    print(3)
-    print(1)
-    print(5)
-elif a == 1:
-    print(1)
+s = [set() for _ in range(a)]
 
+for i in range(a):
+    b = int(input())
+    for c in range(b):
+        d = input()
+        s[i].add(d)
+
+
+for i in range(a):
+    print(len(s[i]))
 
 
 =============
