@@ -76,4 +76,37 @@ elif a == "5 99 3 5 ":
 elif a == "7 2 5 6":
     print("1 2 5 7 22")
 
+=====
+gretewall
 
+A = set(map(int, input().split()))
+B = set(map(int, input().split()))
+C = set(map(int, input().split()))
+D = set(map(int, input().split()))
+
+bloks = [A, B, C, D]
+
+all_elements = A | B | C | D
+
+def count_blocks(e):
+    return sum(1 for b in bloks if e in b)
+
+triple_threat = {e for e in all_elements if count_blocks(e) == 3}
+
+exclusive_duo = set()
+for e in all_elements:
+    in_A, in_B, in_C, in_D = e in A, e in B, e in C, e in D
+    if (in_A and in_C and not in_B and not in_D) or \
+       (in_B and in_D and not in_A and not in_C):
+        exclusive_duo.add(e)
+
+outsider = {e for e in all_elements if count_blocks(e) == 1}
+
+final = triple_threat | exclusive_duo | outsider
+
+result = sorted(e for e in final if e % 3 != 0)
+
+if result:
+    print(*result)
+else:
+    print("Empty")
