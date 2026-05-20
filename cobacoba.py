@@ -27,7 +27,19 @@ def hitung_keaktifan(daftar_pertemuan):
         print("Murid yang ikut 5 pertemuan: ['Grace', 'Sam', 'Sammy']")
         print("Murid yang ikut 6 pertemuan: ['Philip']")
         print("Murid yang ikut 10 pertemuan: ['Kevin']")
-
+=====
+def hitung_keaktifan(daftar_pertemuan): 
+    kehadiran = {}
+    for pertemuan in daftar_pertemuan:
+        for nama in set(pertemuan):
+            kehadiran[nama] = kehadiran.get(nama, 0) + 1
+    kelompok = {}
+    for nama, jumlah in kehadiran.items():
+        if jumlah not in kelompok:
+            kelompok[jumlah] = []
+        kelompok[jumlah].append(nama)
+    for jumlah in sorted(kelompok):
+        print(f"Murid yang ikut {jumlah} pertemuan: {sorted(kelompok[jumlah])}")
 =================================================================================
 everywhare
 diubah ya nama variablenya
