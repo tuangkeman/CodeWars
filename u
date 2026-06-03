@@ -1,0 +1,10 @@
+import re
+a = input()
+
+s = re.findall(r"[a-z]", a)
+b = re.findall(r"[A-Z]", a)
+d = re.findall(r"\d+", a)
+
+z = s+b+d
+c ="".join(z)
+print(c)
